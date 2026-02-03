@@ -2,7 +2,7 @@ import time
 import asyncio
 
 from .helper.scraper import scrapeCouncilMeetings, scrapeMeetingDetails, scrapeLegislationDetail
-from .helper.emailService import sendEmails
+from .helper.senderServices.emailService import sendEmails
 from .helper.webRequester import fetchCouncilMeetings, fetchMeetingDetails, fetchLegislationDetails
 from .helper.ai.aiProcessor import processBillsWithAI
 
