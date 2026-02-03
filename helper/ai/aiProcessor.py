@@ -1,6 +1,6 @@
 import asyncio
-from ..globalStates import categories
-from .tasksManager import getAITasks
+from ...globalStates import categories
+from ..tasksManager import getAITasks
 
 
 async def processBillsWithAI():

@@ -4,7 +4,7 @@ import asyncio
 from .helper.scraper import scrapeCouncilMeetings, scrapeMeetingDetails, scrapeLegislationDetail
 from .helper.emailService import sendEmails
 from .helper.webRequester import fetchCouncilMeetings, fetchMeetingDetails, fetchLegislationDetails
-from .helper.aiProcessor import processBillsWithAI
+from .helper.ai.aiProcessor import processBillsWithAI
 
 async def cli():
     start_time = time.time()
