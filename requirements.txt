@@ -4,5 +4,5 @@ requests
 bs4
 python-docx
 twillio
-python-dotenv
+dotenv
 supabase
