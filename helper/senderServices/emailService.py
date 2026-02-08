@@ -195,18 +195,6 @@ def buildEmailHtml(buttons_html: str) -> str:
     return html
 
 
-def fetchEmailSubscribers():
-    with psycopg2.connect(postgres_connection_string) as conn:
-        with conn.cursor() as cursor:
-            cursor.execute("""
-                SELECT
-                    contact,
-                    topics
-                FROM subscriptions
-                WHERE type_contact = 'email';
-            """)
-            return cursor.fetchall()
-
 
 def buildCategoryBtns(preferred_topics) -> str:
     chunks = []
@@ -241,6 +229,19 @@ def buildCategoryBtns(preferred_topics) -> str:
         """.strip()
 
     return "\n".join(chunks)
+    
+def fetchEmailSubscribers():
+    with psycopg2.connect(postgres_connection_string) as conn:
+        with conn.cursor() as cursor:
+            cursor.execute("""
+                SELECT
+                    contact,
+                    topics
+                FROM subscriptions
+                WHERE type_contact = 'email';
+            """)
+            return cursor.fetchall()
+
 
 
 def sendEmails():
