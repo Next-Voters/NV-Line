@@ -42,3 +42,6 @@ async def cli():
 
 def main():
     asyncio.run(cli())
+
+if __name__ == "__main__":
+    main()

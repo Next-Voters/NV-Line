@@ -1,4 +1,4 @@
-from globalStates import categories
+from ...globalStates import categories
 from dotenv import load_dotenv 
 from os import getenv 
 from supabase import create_client
