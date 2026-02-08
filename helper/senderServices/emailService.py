@@ -14,7 +14,6 @@ postgres_connection_string = getenv("POSTGRES_CONNECTION_STRING")
 
 
 def buildEmailHtml(buttons_html: str) -> str:
-    # IMPORTANT: this is an f-string, because we inject {buttons_html}
     html = f"""\
 <!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml"
