@@ -1,7 +1,7 @@
 import time 
 import asyncio
 
-from .helper.scraperServices.newyorkScraper import scrapeCouncilMeetings, scrapeMeetingDetails, scrapeLegislationDetail
+from .helper.newyorkScraper import scrapeCouncilMeetings, scrapeMeetingDetails, scrapeLegislationDetail
 from .helper.senderServices.emailService import sendEmails
 from .helper.senderServices.htmlReportPackage import buildHTMLReport
 from .helper.webRequester import fetchCouncilMeetings, fetchMeetingDetails, fetchLegislationDetails
