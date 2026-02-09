@@ -12,7 +12,7 @@ url = getenv("SUPABASE_URL")
 key = getenv("SUPABASE_KEY")
 supabase = create_client(url, key)
 
-today = date.today();
+today = date.today()
 
 
 def format_summary_html(text: str) -> str:
